@@ -105,7 +105,7 @@ int main()
     int k = 0;
     int choice = 0;
     int choice2 = 0;
-
+    int choice3 = 0;
 
     //Gathering the users input.
     cout << "How many integers would like to input? ";
@@ -147,7 +147,17 @@ int main()
         }
     }
 
-
+    cout << "Would you like to add a node? (1 for yes, anything else for no.)" << endl;
+    cin >> choice3;
+    if (choice3 == 1) {
+        while (choice3 == 1) {
+            cout << "Which node do you want to add? (Input the number to delete it.) " << endl;
+            cin >> x;
+            Insert(root, x);
+            cout << "Would you like to add more nodes? (1 for yes, anything else for no.)" << endl;
+            cin >> choice3;
+        }
+    }
 
     //The final result of the nodes.
     cout << "Your nodes in Inorder form: ";
